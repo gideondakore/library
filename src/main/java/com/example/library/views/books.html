@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>My Digital Library</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          background: #f4f1ec;
+          color: #333;
+        }
+
+        header {
+          background: #5b3a29;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .library {
+          padding: 30px;
+        }
+
+        .shelf {
+          margin-bottom: 40px;
+        }
+
+        .shelf h2 {
+          margin-bottom: 10px;
+          border-bottom: 3px solid #5b3a29;
+          display: inline-block;
+          padding-bottom: 5px;
+        }
+
+        .books {
+          display: flex;
+          gap: 15px;
+          flex-wrap: wrap;
+          margin-top: 15px;
+        }
+
+        .book {
+          width: 120px;
+          height: 180px;
+          background: #8d6e63;
+          color: #fff;
+          padding: 10px;
+          box-sizing: border-box;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 14px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+          cursor: pointer;
+          transition: transform 0.2s;
+        }
+
+        .book:nth-child(2n) {
+          background: #6d4c41;
+        }
+
+        .book:nth-child(3n) {
+          background: #a1887f;
+          color: #2c2c2c;
+        }
+
+        .book:hover {
+          transform: translateY(-5px);
+        }
+
+        footer {
+          background: #5b3a29;
+          color: #fff;
+          text-align: center;
+          padding: 15px;
+          margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📚 My Library</h1>
+    <p>A simple digital library layout</p>
+</header>
+
+<div class="library">
+
+    <div class="shelf">
+        <h2>Computer Science</h2>
+        <div class="books">
+            <div class="book">Data Structures</div>
+            <div class="book">Algorithms</div>
+            <div class="book">Operating Systems</div>
+            <div class="book">Networking</div>
+        </div>
+    </div>
+
+    <div class="shelf">
+        <h2>Cybersecurity</h2>
+        <div class="books">
+            <div class="book">Ethical Hacking</div>
+            <div class="book">Cryptography</div>
+            <div class="book">Web Security</div>
+            <div class="book">Cloud Security</div>
+        </div>
+    </div>
+
+    <div class="shelf">
+        <h2>General Reading</h2>
+        <div class="books">
+            <div class="book">History</div>
+            <div class="book">Philosophy</div>
+            <div class="book">Self Development</div>
+            <div class="book">Technology Trends</div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 My Digital Library</p>
+</footer>
+
+</body>
+</html>

@@ -28,7 +28,8 @@ public class LibraryController {
 
     // GET /api/books/{id}
     @GetMapping("/{id}")
-    public Book getBook(@PathVariable String id) {
+    public Book getBook(@PathVariable("id") String id) {
+        System.out.println("REQUEST ID: " + id);
         return bookService.getBookById(id);
     }
 
