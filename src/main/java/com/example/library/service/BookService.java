@@ -60,4 +60,8 @@ public class BookService {
     public List<Book> searchByAuthor(String author) {
         return bookRepository.findByAuthor(author);
     }
+
+    public String getLastId(){
+        return String.valueOf(bookRepository.findAll().size() + 1);
+    }
 }
