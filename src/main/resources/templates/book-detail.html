@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        .card {
+            max-width: 600px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .field {
+            margin-bottom: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .available {
+            color: green;
+            font-weight: bold;
+        }
+
+        .unavailable {
+            color: red;
+            font-weight: bold;
+        }
+
+        .actions {
+            margin-top: 25px;
+        }
+
+        .actions a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-right: 10px;
+            color: #fff;
+        }
+
+        .back {
+            background-color: #607d8b;
+        }
+
+        .edit {
+            background-color: #4CAF50;
+        }
+
+        .delete {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>📖 Book Details</h1>
+
+    <div class="field">
+        <span class="label">ID:</span>
+        <span th:text="${book.id}">1</span>
+    </div>
+
+    <div class="field">
+        <span class="label">Title:</span>
+        <span th:text="${book.title}">Book Title</span>
+    </div>
+
+    <div class="field">
+        <span class="label">Author:</span>
+        <span th:text="${book.author}">Author Name</span>
+    </div>
+
+    <div class="field">
+        <span class="label">Status:</span>
+        <span th:if="${book.available}" class="available">✅ Available</span>
+        <span th:unless="${book.available}" class="unavailable">❌ Borrowed</span>
+    </div>
+
+    <div class="actions">
+        <a href="/books" class="back">⬅ Back to Library</a>
+        <a th:href="@{/books/edit/{id}(id=${book.id})}" class="edit">✏ Edit</a>
+        <a th:href="@{/books/delete/{id}(id=${book.id})}" class="delete">🗑 Delete</a>
+    </div>
+</div>
+
+</body>
+</html>
