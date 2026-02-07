@@ -34,6 +34,8 @@ public class BookService {
         if (book.getTitle() == null || book.getTitle().trim().isEmpty()) {
             throw new RuntimeException("Book title cannot be empty");
         }
+
+
         return bookRepository.save(book);
     }
 

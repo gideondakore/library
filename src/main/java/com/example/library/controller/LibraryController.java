@@ -36,6 +36,7 @@ public class LibraryController {
     // POST /api/books
     @PostMapping
     public Book addBook(@RequestBody Book book) {
+
         return bookService.addBook(book);
     }
 
