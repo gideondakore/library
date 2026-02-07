@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class WebController {
 
-    @GetMapping("/books")
+    @GetMapping("/static-books")
     public String booksPage(){
         return "books.html";
     }
