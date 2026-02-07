@@ -21,5 +21,6 @@ public class LibraryApplication {
 
         System.out.println("\n=== Library System Started ===");
         System.out.println("Access the API at: http://localhost:8080/api/books");
+        System.out.println("Access the views page endpoint at: http://localhost:8080/books");
     }
 }
